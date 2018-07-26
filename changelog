@@ -1,0 +1,4 @@
+v0.0.4
+Bug fixed: a taxa name may have more then one taxids, in previous version, only one taxid will be used for searching its lineages.
+
+Use class method to rewrite the codes.
