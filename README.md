@@ -32,6 +32,17 @@ If you want to learn more about Python3 and `pip`, please refer to `https://www.
 	
 Once the NCBI Taxonomy database has been installed, there is no need to connect to the network any more, unless you want to update the database after a period of time, for this case, please go to `http://etetoolkit.org/docs/latest/tutorial/tutorial_ncbitaxonomy.html` for more details.
 
+### using as a module
+
+A taxa_name may have more than one potential_taxid.
+
+		>>>from taxonomy_ranks import TaxonomyRanks
+	    >>>rank_taxon = TaxonomyRanks(taxa_name)
+	    >>>rank_taxon.get_lineage_taxids_and_taxanames()
+	    >>>ranks = ('user_taxa', 'taxa_searched', 'superkingdom', 'kingdom', 'superphylum', 'phylum', 'subphylum', 'superclass', 'class', 'subclass', 'superorder', 'order', 'suborder', 'superfamily', 'family', 'subfamily', 'genus', 'subgenus', 'species')
+	    >>>for rank in ranks:
+	    >>>    print(rank, rank_taxon.lineages[potential_taxid][rank])
+
 ## 4 Example
 
 run 
@@ -120,6 +131,8 @@ Please go to `http://etetoolkit.org/` for more details.
 ## 7 Author
 
 Guanliang MENG. 
+
+linzhi2012 at gmail.com
 
 
 
