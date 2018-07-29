@@ -36,12 +36,13 @@ Once the NCBI Taxonomy database has been installed, there is no need to connect 
 
 A taxa_name may have more than one potential_taxid.
 
-		>>>from taxonomy_ranks import TaxonomyRanks
+	    >>>from taxonomy_ranks import TaxonomyRanks
 	    >>>rank_taxon = TaxonomyRanks(taxa_name)
 	    >>>rank_taxon.get_lineage_taxids_and_taxanames()
 	    >>>ranks = ('user_taxa', 'taxa_searched', 'superkingdom', 'kingdom', 'superphylum', 'phylum', 'subphylum', 'superclass', 'class', 'subclass', 'superorder', 'order', 'suborder', 'superfamily', 'family', 'subfamily', 'genus', 'subgenus', 'species')
-	    >>>for rank in ranks:
-	    >>>    print(rank, rank_taxon.lineages[potential_taxid][rank])
+	    >>>for potential_taxid in rank_taxon.lineages:
+	    >>>    for rank in ranks:
+	    >>>        print(rank, rank_taxon.lineages[potential_taxid][rank])
 
 ## 4 Example
 
