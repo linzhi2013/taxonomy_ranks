@@ -133,8 +133,6 @@ Please go to `http://etetoolkit.org/` for more details.
 
 Guanliang MENG. 
 
-linzhi2012 at gmail.com
-
 
 
 
