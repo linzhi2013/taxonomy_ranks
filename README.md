@@ -5,6 +5,9 @@ To get taxonomy ranks information with ETE3 Python3 module (`http://etetoolkit.o
 
 ## 2 Installation
 
+[![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat)](http://bioconda.github.io/recipes/taxonomy_ranks/README.html)
+
+
 Make sure your `pip` is from Python3
 
 	$ which pip
