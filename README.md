@@ -89,7 +89,7 @@ The solution is obvious.
 		$ mkdir /other/place/myetetoolkit
 
 
-2. remove the directory `~/.etetoolkit`  created by `ete3`:
+2. remove the content in the directory `~/.etetoolkit`  created by `ete3`:
 
 		$ rm -rf ~/.etetoolkit/*
 	
