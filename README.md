@@ -91,12 +91,14 @@ The solution is obvious.
 
 2. remove the directory `~/.etetoolkit`  created by `ete3`:
 
-		$ rm -rf ~/.etetoolkit
+		$ rm -rf ~/.etetoolkit/*
 	
 
-3. link your new directory to the HOME directory:
-
-		$ ln -s /other/place/myetetoolkit ~/.etetoolkit
+3. link the files in your new directory to `~/.etetoolkit`:
+		
+		$ cd ~/.etetoolkit/
+		$ ln -s /other/place/myetetoolkit/taxa.sqlite
+		$ ln -s /other/place/myetetoolkit/taxa.sqlite.traverse.pkl
 		
 4. run the program again:
 
