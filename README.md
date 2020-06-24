@@ -5,9 +5,6 @@ To get taxonomy ranks information with ETE3 Python3 module (`http://etetoolkit.o
 
 ## 2 Installation
 
-[![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat)](http://bioconda.github.io/recipes/taxonomy_ranks/README.html)
-
-
 Make sure your `pip` is from Python3
 
 	$ which pip
@@ -39,13 +36,12 @@ Once the NCBI Taxonomy database has been installed, there is no need to connect 
 
 A taxa_name may have more than one potential_taxid.
 
-	    >>>from taxonomy_ranks import TaxonomyRanks
+		>>>from taxonomy_ranks import TaxonomyRanks
 	    >>>rank_taxon = TaxonomyRanks(taxa_name)
 	    >>>rank_taxon.get_lineage_taxids_and_taxanames()
 	    >>>ranks = ('user_taxa', 'taxa_searched', 'superkingdom', 'kingdom', 'superphylum', 'phylum', 'subphylum', 'superclass', 'class', 'subclass', 'superorder', 'order', 'suborder', 'superfamily', 'family', 'subfamily', 'genus', 'subgenus', 'species')
-	    >>>for potential_taxid in rank_taxon.lineages:
-	    >>>    for rank in ranks:
-	    >>>        print(rank, rank_taxon.lineages[potential_taxid][rank])
+	    >>>for rank in ranks:
+	    >>>    print(rank, rank_taxon.lineages[potential_taxid][rank])
 
 ## 4 Example
 
@@ -89,16 +85,14 @@ The solution is obvious.
 		$ mkdir /other/place/myetetoolkit
 
 
-2. remove the content in the directory `~/.etetoolkit`  created by `ete3`:
+2. remove the directory `~/.etetoolkit`  created by `ete3`:
 
-		$ rm -rf ~/.etetoolkit/*
+		$ rm -rf ~/.etetoolkit
 	
 
-3. link the files in your new directory to `~/.etetoolkit`:
-		
-		$ cd ~/.etetoolkit/
-		$ ln -s /other/place/myetetoolkit/taxa.sqlite
-		$ ln -s /other/place/myetetoolkit/taxa.sqlite.traverse.pkl
+3. link your new directory to the HOME directory:
+
+		$ ln -s /other/place/myetetoolkit ~/.etetoolkit
 		
 4. run the program again:
 
@@ -137,6 +131,8 @@ Please go to `http://etetoolkit.org/` for more details.
 ## 7 Author
 
 Guanliang MENG. 
+
+linzhi2012 at gmail.com
 
 
 

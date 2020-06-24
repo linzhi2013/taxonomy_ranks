@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+changelog
+setup.py
+taxonomy_ranks/__init__.py
+taxonomy_ranks/get_taxonomy_rank_with_ete3_with_super_and_sub.py
+taxonomy_ranks.egg-info/PKG-INFO
+taxonomy_ranks.egg-info/SOURCES.txt
+taxonomy_ranks.egg-info/dependency_links.txt
+taxonomy_ranks.egg-info/entry_points.txt
+taxonomy_ranks.egg-info/requires.txt
+taxonomy_ranks.egg-info/top_level.txt

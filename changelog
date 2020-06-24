@@ -1,3 +1,20 @@
+v0.0.8
+1. fixed a bug on 'from taxonomy_ranks import TaxonomyRanks'
+
+
+v0.0.7
+1. hidden some output
+2. the outfile ('-o' option) now only has the results with lineage information found. all not found input will be in outfile.err.
+
+v0.0.6
+1. add '-verbose' to show more details.
+2. add 'get_para()' function.
+
+
+v0.0.5
+Bug fixed: when an taxid is invalid, go to next taxid, and do not stop the whole program.
+
+
 v0.0.4
 Bug fixed: a taxa name may have more then one taxids, in previous version, only one taxid will be used for searching its lineages.
 

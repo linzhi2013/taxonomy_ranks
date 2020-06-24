@@ -1,0 +1,3 @@
+[console_scripts]
+taxaranks = taxonomy_ranks.get_taxonomy_rank_with_ete3_with_super_and_sub:main
+
