@@ -20,7 +20,7 @@ There will be a command `taxaranks` created under the same directory where your 
 If you want to learn more about Python3 and `pip`, please refer to `https://www.python.org/` and `https://docs.python.org/3/tutorial/venv.html?highlight=pip`.
 
 ## 3 Usage
-### commandline usage
+### 3.1 commandline usage
 
 	$ taxaranks
 
@@ -64,7 +64,7 @@ Once the NCBI Taxonomy database has been installed, there is no need to connect 
 
 A taxa_name may have more than one potential_taxid.
 
-		>>>from taxonomy_ranks import TaxonomyRanks
+        >>>from taxonomy_ranks import TaxonomyRanks
 	    >>>rank_taxon = TaxonomyRanks(taxa_name)
 	    >>>rank_taxon.get_lineage_taxids_and_taxanames()
 	    >>>ranks = ('user_taxa', 'taxa_searched', 'superkingdom', 'kingdom', 'superphylum', 'phylum', 'subphylum', 'superclass', 'class', 'subclass', 'superorder', 'order', 'suborder', 'superfamily', 'family', 'subfamily', 'genus', 'subgenus', 'species')
@@ -109,6 +109,12 @@ Result file `test.taxa.out` will be:
 	Frankliniella occidentalis	Frankliniella occidentalis	Eukaryota	2759	Metazoa	33208	NA	NA	Arthropoda	6656	Hexapoda	6960	NA	NA	Insecta	50557	Pterygota	7496	NA	NA	Thysanoptera	30262	Terebrantia	38130	Thripoidea	45049	Thripidae	45053	Thripinae	153976	Frankliniella	45059	NA	NA	Frankliniella occidentalis	133901
 	Marsupenaeus japonicus	Marsupenaeus japonicus	Eukaryota	2759	Metazoa	33208	NA	NA	Arthropoda	6656	Crustacea	6657	Multicrustacea	2172821	Malacostraca	6681	Eumalacostraca	72041	Eucarida	6682	Decapoda	6683	Dendrobranchiata	6684	Penaeoidea	111520	Penaeidae	6685	NA	NA	Penaeus	133894	NA	NA	Penaeus japonicus	27405
 	Penaeus monodon	Penaeus monodon	Eukaryota	2759	Metazoa	33208	NA	NA	Arthropoda	6656	Crustacea	6657	Multicrustacea	2172821	Malacostraca	6681	Eumalacostraca	72041	Eucarida	6682	Decapoda	6683	Dendrobranchiata	6684	Penaeoidea	111520	Penaeidae	6685	NA	NA	Penaeus	133894	NA	NA	Penaeus monodon	6687
+
+
+**Warning**
+
+The reason for providing the two columns (`user_taxa` and `taxa_searched`) are,
+sometimes a user input taxon may correspond to multiple NCBI taxa (probably belonging to different clades). When this happens, the lineage for all each taxon will be output, you MUST check this carefully!
 
 
 ## 5 Problems
