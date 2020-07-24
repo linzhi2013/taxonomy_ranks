@@ -20,6 +20,7 @@ There will be a command `taxaranks` created under the same directory where your 
 If you want to learn more about Python3 and `pip`, please refer to `https://www.python.org/` and `https://docs.python.org/3/tutorial/venv.html?highlight=pip`.
 
 ## 3 Usage
+### commandline usage
 
 	$ taxaranks
 
@@ -52,14 +53,14 @@ If you want to learn more about Python3 and `pip`, please refer to `https://www.
 		  -v          verbose output
 
 
-	The `-i <file>` file can be a list of ncbi taxa id or species names (or higher ranks, e.g. Family, Order), or a mixture of them.
+The `-i <file>` file can be a list of ncbi taxa id or species names (or higher ranks, e.g. Family, Order), or a mixture of them.
 
 
-ete3 package will automatically download the NCBI Taxonomy database during the first time using of this program.
+ETE3 package will automatically download the NCBI Taxonomy database during the first time using of this program.
     
 Once the NCBI Taxonomy database has been installed, there is no need to connect to the network any more, unless you want to update the database after a period of time, for this case, please go to `http://etetoolkit.org/docs/latest/tutorial/tutorial_ncbitaxonomy.html` for more details.
 
-### using as a module
+### 3.2 using as a module
 
 A taxa_name may have more than one potential_taxid.
 
