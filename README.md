@@ -50,6 +50,8 @@ If you want to learn more about Python3 and `pip`, please refer to `https://www.
 		              ranks, e.g. Family, Order), or a mixture of them.
 		  -o <file>   outfile
 		  -t          Also print out the taxid for each rank
+		  -e          Also print out the records without lineage information found to
+              the '-o <file>'
 		  -v          verbose output
 
 
