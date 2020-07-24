@@ -168,7 +168,10 @@ For more details, refer to `http://etetoolkit.org/docs/latest/tutorial/tutorial_
 
 ## 6 Citations
 
-	Guanliang Meng, Yiyuan Li, Chentao Yang, Shanlin Liu, MitoZ: a toolkit for animal mitochondrial genome assembly, annotation and visualization, Nucleic Acids Research, , gkz173, https://doi.org/10.1093/nar/gkz173
+	Guanliang Meng, Yiyuan Li, Chentao Yang, Shanlin Liu,
+	MitoZ: a toolkit for animal mitochondrial genome assembly, annotation and visualization,
+	Nucleic Acids Research,
+	https://doi.org/10.1093/nar/gkz173
 
 
 
