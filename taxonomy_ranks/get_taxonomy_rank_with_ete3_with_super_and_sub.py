@@ -3,7 +3,7 @@ import argparse
 """
 get_taxonomy_rank_with_ete3.py
 
-Copyright (c) 2017-2018 Guanliang Meng <mengguanliang@foxmail.com>.
+Copyright (c) 2017-2020 Guanliang Meng <linzhi2012@gmail.com>.
 
 This file is part of MitoZ.
 
@@ -58,6 +58,9 @@ name, I will try to search the first word (Genus).
 
     parser.add_argument('-t', dest='print_taxid', action='store_true',
         help='Also print out the taxid for each rank')
+
+    parser.add_argument('-e', dest='print_missing', action='store_true',
+        help="Also print out the records without lineage information found to the '-o <file>' ")
 
     parser.add_argument('-v', dest='verbose', action='store_true',
         help='verbose output')
@@ -144,6 +147,8 @@ def main():
     outfile = args.outfile
     verbose = args.verbose
     print_taxid = args.print_taxid
+    print_missing = args.print_missing
+
     err_list_outfile = outfile + '.err'
 
     ranks = ('user_taxa', 'taxa_searched', 'superkingdom', 'kingdom', 'superphylum', 'phylum', 'subphylum', 'superclass', 'class', 'subclass', 'superorder', 'order', 'suborder', 'superfamily', 'family', 'subfamily', 'genus', 'subgenus', 'species')
@@ -169,6 +174,8 @@ def main():
                     print('{0} is invalid!'.format(taxa_name), file=sys.stderr)
 
                 print(taxa_name, file=fhlog, flush=True)
+                if print_missing:
+                    print(taxa_name, file=fhout)
                 continue
             else:
                 for potential_taxid in rank_taxon.lineages:
