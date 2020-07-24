@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="taxonomy_ranks",
-    version="0.0.9",
+    version="0.0.10",
     author='Guanliang MENG',
     author_email='linzhi2012@gmail.com',
     description="To get taxonomy ranks information with ETE3 from NCBI Taxonomy database.",
