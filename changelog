@@ -1,3 +1,7 @@
+v0.0.9
+1. Add a '-t' option so that it can also output the taxid for each rank.
+
+
 v0.0.8
 1. fixed a bug on 'from taxonomy_ranks import TaxonomyRanks'
 

@@ -56,6 +56,9 @@ name, I will try to search the first word (Genus).
     parser.add_argument('-o', dest='outfile', metavar='<file>',
         help='outfile')
 
+    parser.add_argument('-t', dest='print_taxid', action='store_true',
+        help='Also print out the taxid for each rank')
+
     parser.add_argument('-v', dest='verbose', action='store_true',
         help='verbose output')
 
@@ -119,7 +122,7 @@ class TaxonomyRanks(NCBITaxa):
             potential_taxid = str(potential_taxid)
             self.lineages.setdefault(potential_taxid, {})
             for rank in self.ranks:
-                self.lineages[potential_taxid][rank] = 'NA'
+                self.lineages[potential_taxid][rank] = ('NA', 'NA')
 
             self.lineages[potential_taxid]['user_taxa'] = self.user_taxa
             self.lineages[potential_taxid]['taxa_searched'] = self.taxa_searched
@@ -132,7 +135,7 @@ class TaxonomyRanks(NCBITaxa):
                 rank = self.get_rank([j])[j]
                 taxa = self.get_taxid_translator([j])[j]
                 if rank in self.ranks:
-                    self.lineages[str(potential_taxid)][rank] = taxa
+                    self.lineages[str(potential_taxid)][rank] = (taxa, j)
 
 
 def main():
@@ -140,12 +143,19 @@ def main():
     taxonomy_list = args.taxonomy_list
     outfile = args.outfile
     verbose = args.verbose
+    print_taxid = args.print_taxid
     err_list_outfile = outfile + '.err'
 
     ranks = ('user_taxa', 'taxa_searched', 'superkingdom', 'kingdom', 'superphylum', 'phylum', 'subphylum', 'superclass', 'class', 'subclass', 'superorder', 'order', 'suborder', 'superfamily', 'family', 'subfamily', 'genus', 'subgenus', 'species')
 
+    ranks_taxid = ('user_taxa', 'taxa_searched', 'superkingdom', 'superkingdom_taxid', 'kingdom', 'kingdom_taxid', 'superphylum', 'superphylum_taxid', 'phylum', 'phylum_taxid', 'subphylum', 'subphylum_taxid', 'superclass', 'superclass_taxid', 'class', 'class_taxid', 'subclass', 'subclass_taxid', 'superorder', 'superorder_taxid', 'order', 'order_taxid', 'suborder', 'suborder_taxid', 'superfamily', 'superfamily_taxid', 'family', 'family_taxid', 'subfamily', 'subfamily_taxid', 'genus', 'genus_taxid', 'subgenus', 'subgenus_taxid', 'species', 'species_taxid')
+
     with open(taxonomy_list, 'r') as fh, open(outfile, 'w') as fhout, open(err_list_outfile, 'w') as fhlog:
-        print('\t'.join(ranks), file=fhout)
+        if not print_taxid:
+            print('\t'.join(ranks), file=fhout)
+        else:
+            print('\t'.join(ranks_taxid), file=fhout)
+
         for taxa_name in fh:
             taxa_name = taxa_name.strip()
             if not taxa_name:
@@ -163,8 +173,18 @@ def main():
             else:
                 for potential_taxid in rank_taxon.lineages:
                     line = []
-                    for rank in ranks:
+                    for rank in ranks[0:2]:
+                        # the first two columns: 'user_taxa', 'taxa_searched'
                         line.append(rank_taxon.lineages[potential_taxid][rank])
+
+                    # remained columns
+                    for rank in ranks[2:]:
+                        taxon, taxid = rank_taxon.lineages[potential_taxid][rank]
+                        if print_taxid:
+                            line.extend([taxon, str(taxid)])
+                        else:
+                            line.append(taxon)
+
                     line = "\t".join(line)
                     print(line, file=fhout)
 

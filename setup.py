@@ -5,14 +5,14 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="taxonomy_ranks",
-    version="0.0.8",
+    version="0.0.9",
     author='Guanliang MENG',
     author_email='linzhi2012@gmail.com',
     description="To get taxonomy ranks information with ETE3 from NCBI Taxonomy database.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     python_requires='>=3',
-    url='http://mengguanliang.com',
+    url='https://github.com/linzhi2013/taxonomy_ranks',
     packages=setuptools.find_packages(),
     include_package_data=True,
     install_requires=['ete3', 'six'],
