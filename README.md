@@ -187,7 +187,7 @@ Please go to `http://etetoolkit.org/` for more details.
 
 Guanliang MENG. 
 
-linzhi2012 <MitoZ> gmail<MitoZ>com
+linzhi2012\<MitoZ\>gmail\<MitoZ\>com
 
 
 
