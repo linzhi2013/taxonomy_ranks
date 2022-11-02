@@ -117,6 +117,11 @@ Result file `test.taxa.out` will be:
 The reason for providing the two columns (`user_taxa` and `taxa_searched`) are,
 sometimes a user input taxon may correspond to multiple NCBI taxa (probably belonging to different clades). When this happens, the lineage for all each taxon will be output, you MUST check this carefully!
 
+## Speed and Parallelisation
+
+If you have a lot of taxa or taxon ids to search, it could be a bit slow. For this case, please refer to https://github.com/linzhi2013/taxonomy_ranks/issues/1.
+
+
 
 ## 5 Problems
 ### Your HOME directory runs out of space when downloading and installing the NCBI Taxonomy database during the first time using of this program.
