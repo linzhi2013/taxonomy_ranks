@@ -117,13 +117,20 @@ Result file `test.taxa.out` will be:
 The reason for providing the two columns (`user_taxa` and `taxa_searched`) are,
 sometimes a user input taxon may correspond to multiple NCBI taxa (probably belonging to different clades). When this happens, the lineage for all each taxon will be output, you MUST check this carefully!
 
-## Speed and Parallelisation
+## 5 Speed and Parallelisation
 
-If you have a lot of taxa or taxon ids to search, it could be a bit slow. For this case, please refer to https://github.com/linzhi2013/taxonomy_ranks/issues/1.
+If you have a lot of taxa or taxon ids to search, it could be a bit slow. For this case, please refer to https://github.com/linzhi2013/taxonomy_ranks/issues/1 (Thanks to @HuoJnx !).
+
+I have copied that code snipet to the file `parallelize_taxon.sh`. You can download the file to your sever, and then
+
+```
+sh parallelize_taxon.sh <file_list_of_ncbi_taxa_id_or_species_names>
+```
+
+It assumes that your server has the `parallel` command installed (https://anaconda.org/conda-forge/parallel).
 
 
-
-## 5 Problems
+## 6 Problems
 ### Your HOME directory runs out of space when downloading and installing the NCBI Taxonomy database during the first time using of this program.
 
 The error message can be:
@@ -172,7 +179,7 @@ For more details, refer to `http://etetoolkit.org/docs/latest/tutorial/tutorial_
 		>ncbi.update_taxonomy_database()
 
 
-## 6 Citations
+## 7 Citations
 
 	Guanliang Meng, Yiyuan Li, Chentao Yang, Shanlin Liu,
 	MitoZ: a toolkit for animal mitochondrial genome assembly, annotation and visualization,
@@ -189,7 +196,7 @@ Besides, since `taxonomy-ranks` makes use of the `ete3` toolkit, you should also
 
 Please go to `http://etetoolkit.org/` for more details.
 
-## 7 Author
+## 8 Author
 
 Guanliang MENG. 
 
