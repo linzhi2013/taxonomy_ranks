@@ -3,9 +3,18 @@
 ## 1 Introduction
 To get taxonomy ranks information with ETE3 Python3 module (`http://etetoolkit.org/`)
 
-## 2 Installation
+## 2 Installation [![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat)](http://bioconda.github.io/recipes/taxonomy_ranks/README.html)
 
-Make sure your `pip` is from Python3
+You can install this program via `pip3` or `conda` or `mammba` (https://mamba.readthedocs.io/en/latest/) command.
+
+### Conda
+```bash
+$ conda install taxonomy_ranks
+# or  
+$ mamba install taxonomy_ranks
+```
+### Pip
+Make sure your `pip3` is from Python3
 
 	$ which pip
 	/Users/mengguanliang/soft/miniconda3/bin/pip
