@@ -1,7 +1,7 @@
 # taxonomy-ranks
 
 ## 1 Introduction
-To get taxonomy ranks information with ETE3 Python3 module (`http://etetoolkit.org/`). This is program is part of MitoZ (https://github.com/linzhi2013/MitoZ).
+To get taxonomy ranks information with ETE3 Python3 module (`http://etetoolkit.org/`). This is program is part of MitoZ (https://github.com/linzhi2013/MitoZ), 
 
 ## 2 Installation [![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat)](http://bioconda.github.io/recipes/taxonomy_ranks/README.html)
 
@@ -28,6 +28,15 @@ There will be a command `taxaranks` created under the same directory where your 
 
 If you want to learn more about Python3 and `pip`, please refer to `https://www.python.org/` and `https://docs.python.org/3/tutorial/venv.html?highlight=pip`.
 
+### MitoZ
+If your have MitoZ  >= 3.5-beta-1 installed, you actually already have this program:
+
+```
+$ mitoz-tools taxonomy_ranks -h
+```
+
+See https://github.com/linzhi2013/MitoZ/wiki/The-%27mitoz-tools-taxonomy_ranks%27-command
+ 
 ## 3 Usage
 ### 3.1 commandline usage
 
