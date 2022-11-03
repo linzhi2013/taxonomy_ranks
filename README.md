@@ -92,9 +92,13 @@ rank_taxon.get_lineage_taxids_and_taxanames()
 ranks = ('user_taxa', 'taxa_searched', 'superkingdom', 'kingdom', 'superphylum', 'phylum', 'subphylum', 'superclass', 'class', 'subclass', 'superorder', 'order', 'suborder', 'superfamily', 'family', 'subfamily', 'genus', 'subgenus', 'species')
 
 for potential_taxid in rank_taxon.lineages:
-    for rank in ranks:
-	taxon, taxid = rank_taxon.lineages[potential_taxid][rank]
-        print(potential_taxid, rank, taxon, taxid, sep='\t')
+     for rank in ranks:
+         if rank in ('user_taxa', 'taxa_searched'):
+             taxon = rank_taxon.lineages[potential_taxid][rank]
+             print(potential_taxid, rank, taxon, sep='\t')
+         else:
+             taxon, taxid = rank_taxon.lineages[potential_taxid][rank]
+             print(potential_taxid, rank, taxon, taxid, sep='\t')
 
 ```
 
