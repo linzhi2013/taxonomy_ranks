@@ -121,7 +121,7 @@ sometimes a user input taxon may correspond to multiple NCBI taxa (probably belo
 
 If you have a lot of taxa or taxon ids to search, it could be a bit slow. For this case, please refer to https://github.com/linzhi2013/taxonomy_ranks/issues/1 (Thanks to @HuoJnx !).
 
-I have copied that code snipet to the file `parallelize_taxon.sh`. You can download the file to your sever, and then
+I have copied that code snippet to the file `parallelize_taxon.sh`. You can download the file to your sever, and then
 
 ```
 sh parallelize_taxon.sh <file_list_of_ncbi_taxa_id_or_species_names>
