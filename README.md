@@ -85,6 +85,10 @@ rank_taxon.get_lineage_taxids_and_taxanames()
 
 ranks = ('user_taxa', 'taxa_searched', 'superkingdom', 'kingdom', 'superphylum', 'phylum', 'subphylum', 'superclass', 'class', 'subclass', 'superorder', 'order', 'suborder', 'superfamily', 'family', 'subfamily', 'genus', 'subgenus', 'species')
 
+# If you don't want the results of so many ranks, just simplify the 'ranks' tupe, e.g.
+# ranks = ('user_taxa', 'taxa_searched',  'superkingdom', 'kingdom', 'phylum', 'class', 'order', 'family', 'genus', 'species')
+# The rank without a value found in the database will have the default vale 'NA'.
+
 for potential_taxid in rank_taxon.lineages:
      for rank in ranks:
          if rank in ('user_taxa', 'taxa_searched'):
