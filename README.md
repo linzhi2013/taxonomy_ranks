@@ -72,7 +72,7 @@ Once the NCBI Taxonomy database has been installed, there is no need to connect 
 
 ### 3.2 using as a module
 
-A taxa_name may have more than one `potential_taxid`.
+A `taxa_name` may have more than one `potential_taxid`.
 
 ```python
 from taxonomy_ranks import TaxonomyRanks
@@ -91,8 +91,8 @@ for potential_taxid in rank_taxon.lineages:
              taxon = rank_taxon.lineages[potential_taxid][rank]
              print(potential_taxid, rank, taxon, sep='\t')
          else:
-             taxon, taxid = rank_taxon.lineages[potential_taxid][rank]
-             print(potential_taxid, rank, taxon, taxid, sep='\t')
+             taxon, taxid_of_taxon = rank_taxon.lineages[potential_taxid][rank]
+             print(potential_taxid, rank, taxon, taxid_of_taxon, sep='\t')
 
 ```
 
