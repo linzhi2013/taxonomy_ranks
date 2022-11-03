@@ -68,6 +68,8 @@ A taxa_name may have more than one `potential_taxid`.
 ```python
 from taxonomy_ranks import TaxonomyRanks
 
+taxa_name = 'homo sapiens'
+
 rank_taxon = TaxonomyRanks(taxa_name)
 
 rank_taxon.get_lineage_taxids_and_taxanames()
