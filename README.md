@@ -63,23 +63,6 @@ Once the NCBI Taxonomy database has been installed, there is no need to connect 
 
 ### 3.2 using as a module
 
-for potential_taxid in rank_taxon.lineages:
-                    line = []
-                    for rank in ranks[0:2]:
-                        # the first two columns: 'user_taxa', 'taxa_searched'
-                        line.append(rank_taxon.lineages[potential_taxid][rank])
-
-                    # remained columns
-                    for rank in ranks[2:]:
-                        taxon, taxid = rank_taxon.lineages[potential_taxid][rank]
-                        if print_taxid:
-                            line.extend([taxon, str(taxid)])
-                        else:
-                            line.append(taxon)
-
-                    line = "\t".join(line)
-                    print(line, file=fhout)
-		    
 A taxa_name may have more than one `potential_taxid`.
 
 ```python
