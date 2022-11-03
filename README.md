@@ -151,9 +151,9 @@ Result file `test.taxa.out` content:
 
 With the '-t' optioin,
 
-	$ taxaranks -i test.taxa -o test.taxa.out -t
+	$ taxaranks -i test.taxa -o test.taxa.tsv -t
 
-Result file `test.taxa.out` will be:
+Result file `test.taxa.tsv` will be:
 
 	user_taxa	taxa_searched	superkingdom	superkingdom_taxid	kingdom	kingdom_taxid	superphylum	superphylum_taxid	phylum	phylum_taxid	subphylum	subphylum_taxid	superclass	superclass_taxid	class	class_taxid	subclass	subclass_taxid	superorder	superorder_taxid	order	order_taxid	suborder	suborder_taxid	superfamily	superfamily_taxid	family	family_taxid	subfamily	subfamily_taxid	genus	genus_taxid	subgenus	subgenus_taxid	species	species_taxid
 	Spodoptera litura	Spodoptera litura	Eukaryota	2759	Metazoa	33208	NA	NA	Arthropoda	6656	Hexapoda	6960	NA	NA	Insecta	50557	Pterygota	7496	Amphiesmenoptera	85604	Lepidoptera	7088	Glossata	41191	Noctuoidea	37570	Noctuidae	7100	Amphipyrinae	95182	Spodoptera	7106	NA	NA	Spodoptera litura	69820
