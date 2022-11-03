@@ -128,7 +128,7 @@ for potential_taxid in rank_taxon.lineages:
 
 run 
 
-	$ taxaranks -i test.taxa -o test.taxa.out
+	$ taxaranks -i test.taxa -o test.taxa.tsv
 
 Input file `test.taxa`content:
 	
@@ -139,7 +139,7 @@ Input file `test.taxa`content:
 	Marsupenaeus japonicus
 	Penaeus monodon
 
-Result file `test.taxa.out` content:
+Result file `test.taxa.tsv` content:
 
 	user_taxa	taxa_searched	superkingdom	kingdom	superphylum	phylum	subphylum	superclass	class	subclass	superorder	order	suborder	superfamily	family	subfamily	genus	subgenus	species
 	Spodoptera litura	Spodoptera litura	Eukaryota	Metazoa	NA	Arthropoda	Hexapoda	NA	Insecta	Pterygota	Amphiesmenoptera	Lepidoptera	Glossata	Noctuoidea	Noctuidae	Amphipyrinae	Spodoptera	NA	Spodoptera litura
