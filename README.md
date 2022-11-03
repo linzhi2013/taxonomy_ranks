@@ -94,6 +94,30 @@ for potential_taxid in rank_taxon.lineages:
              taxon, taxid_of_taxon = rank_taxon.lineages[potential_taxid][rank]
              print(potential_taxid, rank, taxon, taxid_of_taxon, sep='\t')
 
+# the outputs are:
+9606	user_taxa	homo sapiens
+9606	taxa_searched	homo sapiens
+9606	superkingdom	Eukaryota	2759
+9606	kingdom	Metazoa	33208
+9606	superphylum	NA	NA
+9606	phylum	Chordata	7711
+9606	subphylum	Craniata	89593
+9606	superclass	Sarcopterygii	8287
+9606	class	Mammalia	40674
+9606	subclass	NA	NA
+9606	superorder	Euarchontoglires	314146
+9606	order	Primates	9443
+9606	suborder	Haplorrhini	376913
+9606	superfamily	Hominoidea	314295
+9606	family	Hominidae	9604
+9606	subfamily	Homininae	207598
+9606	genus	Homo	9605
+9606	subgenus	NA	NA
+9606	species	Homo sapiens	9606
+
+# In the above, the taxid 9606 is for homo sapiens
+# while each rank has its own taxid, e.g. 2759 is for Eukaryota.
+
 ```
 
 ## 4 Example
