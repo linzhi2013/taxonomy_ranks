@@ -1,7 +1,11 @@
 # taxonomy-ranks
 
 ## 1 Introduction
-To get taxonomy ranks information with ETE3 Python3 module (`http://etetoolkit.org/`). This is program is part of MitoZ (https://github.com/linzhi2013/MitoZ), 
+To get taxonomy ranks information with ETE3 Python3 module (`http://etetoolkit.org/`). 
+
+This program was from MitoZ and is still part of MitoZ (https://github.com/linzhi2013/MitoZ), so please cite the publication below if this program is helpful for you, thanks!
+
+- Guanliang Meng, Yiyuan Li, Chentao Yang, Shanlin Liu, MitoZ: a toolkit for animal mitochondrial genome assembly, annotation and visualization, Nucleic Acids Research, https://doi.org/10.1093/nar/gkz173
 
 ## 2 Installation [![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat)](http://bioconda.github.io/recipes/taxonomy_ranks/README.html)
 
