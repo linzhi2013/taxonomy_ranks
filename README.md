@@ -93,7 +93,8 @@ ranks = ('user_taxa', 'taxa_searched', 'superkingdom', 'kingdom', 'superphylum',
 
 for potential_taxid in rank_taxon.lineages:
     for rank in ranks:
-        print(potential_taxid, rank, rank_taxon.lineages[potential_taxid][rank], sep='\t')
+	taxon, taxid = rank_taxon.lineages[potential_taxid][rank]
+        print(potential_taxid, rank, taxon, taxid, sep='\t')
 
 ```
 
