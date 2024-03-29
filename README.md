@@ -247,6 +247,13 @@ For more details, refer to `http://etetoolkit.org/docs/latest/tutorial/tutorial_
 		>ncbi.update_taxonomy_database()
 
 
+You can also manually download the database from ncbi:
+```bash
+wget https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
+```
+
+		> ncbi.update_taxonomy_database(taxdump_file='taxdump.tar.gz')
+
 ## 7 Citations
 
 - Guanliang Meng, Yiyuan Li, Chentao Yang, Shanlin Liu, MitoZ: a toolkit for animal mitochondrial genome assembly, annotation and visualization, Nucleic Acids Research, https://doi.org/10.1093/nar/gkz173
